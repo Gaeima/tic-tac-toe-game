@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>3D Tic-Tac-Toe | Garima Verma</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="background-shape shape1"></div>
+    <div class="background-shape shape2"></div>
+
+    <main class="game-container">
+
+        <header>
+            <p class="badge">WEB GAME PROJECT</p>
+            <h1>3D Tic-Tac-Toe</h1>
+            <p class="subtitle">Challenge your friend or play against AI</p>
+        </header>
+
+        <!-- Game Controls -->
+        <section class="controls">
+            <button id="twoPlayerBtn" class="control-btn active">👥 2 Players</button>
+            <button id="aiBtn" class="control-btn">🤖 VS AI</button>
+        </section>
+
+        <!-- Difficulty -->
+        <div id="difficultyBox" class="difficulty-box hidden">
+            <label for="difficulty">AI Difficulty</label>
+            <select id="difficulty">
+                <option value="easy">Easy</option>
+                <option value="medium">Medium</option>
+                <option value="hard">Hard</option>
+            </select>
+        </div>
+
+        <!-- Score -->
+        <section class="score-board">
+            <div class="score-card x-card"><span>PLAYER X</span><strong id="scoreX">0</strong></div>
+            <div class="score-card draw-card"><span>DRAWS</span><strong id="scoreDraw">0</strong></div>
+            <div class="score-card o-card"><span id="playerOName">PLAYER O</span><strong id="scoreO">0</strong></div>
+        </section>
+
+        <!-- Turn -->
+        <div class="turn-box">
+            <span id="turnIcon">❌</span>
+            <span id="status">Player X's Turn</span>
+        </div>
+
+        <!-- 3D Board -->
+        <section class="board-wrapper">
+            <div class="board" id="board">
+                <button class="cell" data-index="0"></button>
+                <button class="cell" data-index="1"></button>
+                <button class="cell" data-index="2"></button>
+                <button class="cell" data-index="3"></button>
+                <button class="cell" data-index="4"></button>
+                <button class="cell" data-index="5"></button>
+                <button class="cell" data-index="6"></button>
+                <button class="cell" data-index="7"></button>
+                <button class="cell" data-index="8"></button>
+            </div>
+        </section>
+
+        <!-- Result -->
+        <div id="result" class="result"></div>
+
+        <!-- Buttons -->
+        <div class="action-buttons">
+            <button id="restartBtn" class="restart-btn">🔄 New Game</button>
+            <button id="themeBtn" class="theme-btn">🌙 Theme</button>
+        </div>
+
+        <footer>
+            <p>Designed & Developed by <strong>Garima Verma</strong></p>
+            <small>HTML • CSS • JavaScript</small>
+        </footer>
+
+    </main>
+
+    <!-- ===== WINNER POPUP - YE ADD KIYA HAI ===== -->
+    <div id="celebration" class="celebration hidden">
+        <div class="celebration-box">
+            <h1 id="celebrationText">🎉 You Are Winner! 🎉</h1>
+            <p id="celebrationSub"></p>
+            <button onclick="closeCelebration()">Play Again 🔄</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
